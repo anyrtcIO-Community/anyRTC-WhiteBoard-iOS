@@ -1,0 +1,6 @@
+framework module AnyRTCBoardSDK {
+  umbrella header "AnyRTCBoardSDK.h"
+
+  export *
+  module * { export * }
+}

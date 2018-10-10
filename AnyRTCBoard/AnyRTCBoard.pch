@@ -1,0 +1,38 @@
+//
+//  AnyRTCBoard.pch
+//  AnyRTCBoard
+//
+//  Created by jh on 2018/10/8.
+//  Copyright © 2018年 anyRTC. All rights reserved.
+//
+
+#ifndef AnyRTCBoard_pch
+#define AnyRTCBoard_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <AnyRTCBoardSDK/AnyRTCBoardSDK.h>
+#import "UIButton+ImageTitleSpacing.h"
+#import "UIAlertController+Blocks.h"
+#import "SVProgressHUD.h"
+#import "AppDelegate.h"
+#import "AnyRTCRoomController.h"
+
+// MARK: - 宏
+
+#define AnyRTCBoard_Color_Black @"#000000"
+
+#define AnyRTCBoard_Color_Blue @"#0077FF"
+
+#define AnyRTCBoard_Color_green @"#2CC233"
+
+#define AnyRTCBoard_Color_Red @"#FF3A35"
+
+//RGB
+#define RGBA(r, g, b, a)    [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r, g, b)     RGBA(r, g, b, 1.0f)
+
+#define WEAKSELF __weak typeof(self)weakSelf = self
+
+#endif /* AnyRTCBoard_pch */

@@ -1,0 +1,34 @@
+PODS:
+  - AnyRTCBoardSDK (2.0.9):
+    - SDWebImage (~> 4.4.2)
+    - Socket.IO-Client-Swift (~> 13.3.0)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - Socket.IO-Client-Swift (13.3.1):
+    - Starscream (~> 3.0.2)
+  - Starscream (3.0.6)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - AnyRTCBoardSDK (~> 2.0.9)
+  - SVProgressHUD
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AnyRTCBoardSDK
+    - SDWebImage
+    - Socket.IO-Client-Swift
+    - Starscream
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  AnyRTCBoardSDK: 429808079fab6d0f871a285dded328a46aa427ee
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  Socket.IO-Client-Swift: 79f8f85fa44881838175a20f9bd2c32bef2c9d37
+  Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 66fcf348e7b5dcf999b725f6557b6a5949820b62
+
+COCOAPODS: 1.5.0
