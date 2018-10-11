@@ -156,11 +156,11 @@
             //退出
             [self exitBoardRoom];
             break;
-        case 107:
+        case 104:
             //撤销
             [_boardView undo];
             break;
-        case 108:
+        case 105:
             //清空当前
             [_boardView clearCurrentDraw];
             //清空所有

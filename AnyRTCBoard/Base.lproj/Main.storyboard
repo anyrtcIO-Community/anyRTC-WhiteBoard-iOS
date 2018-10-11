@@ -210,7 +210,7 @@
                                                     <action selector="bouncedBottom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CYT-VA-1b3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSW-44-ecL">
+                                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSW-44-ecL">
                                                 <rect key="frame" x="0.0" y="409" width="70" height="121.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="撤销" image="repeal">
@@ -220,7 +220,7 @@
                                                     <action selector="handleBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dIJ-9h-gow"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="108" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiB-e9-ehd">
+                                            <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IiB-e9-ehd">
                                                 <rect key="frame" x="0.0" y="545.5" width="70" height="121.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                 <state key="normal" title="清空" image="clear">
@@ -338,7 +338,7 @@
     </scenes>
     <resources>
         <image name="anyRTCLOGO" width="215" height="55"/>
-        <image name="board_exit" width="35" height="35"/>
+        <image name="board_exit" width="33" height="33"/>
         <image name="board_open" width="33" height="33"/>
         <image name="board_unOpen" width="33" height="33"/>
         <image name="brush_blue" width="22" height="22"/>
