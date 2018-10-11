@@ -1,5 +1,5 @@
 PODS:
-  - AnyRTCBoardSDK (2.1.0):
+  - AnyRTCBoardSDK (2.1.1):
     - SDWebImage (~> 4.4.2)
     - Socket.IO-Client-Swift (~> 13.3.0)
   - SDWebImage (4.4.2):
@@ -11,7 +11,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - AnyRTCBoardSDK (~> 2.1.0)
+  - AnyRTCBoardSDK (~> 2.1.1)
   - SVProgressHUD
 
 SPEC REPOS:
@@ -23,12 +23,12 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  AnyRTCBoardSDK: c61c35e644a900ca69788290916bee89f60e23b5
+  AnyRTCBoardSDK: e07c80fcd642d7014e884e76da2b69ba484a9996
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   Socket.IO-Client-Swift: 79f8f85fa44881838175a20f9bd2c32bef2c9d37
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: c52b40adc8c6afc45d17f79791e6f69c5ee802ab
+PODFILE CHECKSUM: ab3a40a07f16c8aa4a2fb1370fc4d46963ca13b9
 
 COCOAPODS: 1.5.0

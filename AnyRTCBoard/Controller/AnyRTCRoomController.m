@@ -51,7 +51,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _brushMode = AnyRTCBoardBrushModelTransform;
+    self.isTeacher ? (_brushMode = AnyRTCBoardBrushModelTransformSync) : (_brushMode = AnyRTCBoardBrushModelTransform);
+    
     //工具、颜色、粗细
     _toolArr = @[@"brush_unSelected",@"arrow_unSelected",@"line_unSelected",@"box_unSelected"];
     _colorArr = @[@"brush_black",@"brush_blue",@"brush_green",@"brush_red"];
@@ -75,7 +76,7 @@
     }
     
     //初始化画板
-    _boardView = [[AnyRTCBoardView alloc] initWithRoomID:self.roomId withFileId:@"888888" withUserId:[self randomString:6] withUrlArray:imageArr];
+    _boardView = [[AnyRTCBoardView alloc] initWithRoomID:self.roomId withFileId:@"888888" withUserId:[[AnyRTCCommon getUUID]substringToIndex:6] withUrlArray:imageArr];
     _boardView.backgroundColor = [UIColor lightGrayColor];
     CGRect drawFrame = AVMakeRectWithAspectRatioInsideRect(CGSizeMake(16, 9), self.view.frame);
     _boardView.frame = drawFrame;
@@ -95,7 +96,7 @@
     //画板错误
     [_activityIndicator stopAnimating];
     WEAKSELF;
-    [UIAlertController showAlertInViewController:self withTitle:@"提示" message:[self getErrorCode:nCode] cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@[@"确定"] tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
+    [UIAlertController showAlertInViewController:self withTitle:@"提示" message:[AnyRTCCommon getErrorCode:nCode] cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:@[@"确定"] tapBlock:^(UIAlertController * _Nonnull controller, UIAlertAction * _Nonnull action, NSInteger buttonIndex) {
         [weakSelf exitBoardRoom];
     }];
 }
@@ -127,11 +128,11 @@
     switch (sender.tag) {
         case 100:
             //上一页
-            [_boardView prePageWithSync:YES];
+            [_boardView prePageWithSync:self.isTeacher];
             break;
         case 101:
             //下一页
-            [_boardView nextPageWithSync:YES];
+            [_boardView nextPageWithSync:self.isTeacher];
             break;
         case 102:
             //侧边栏
@@ -139,11 +140,11 @@
             sender.selected = !sender.selected;
             if (sender.selected) {
                 self.marginX.constant = 0;
-                (_brushMode == AnyRTCBoardBrushModelTransform) ? (_brushMode = AnyRTCBoardBrushModelGraffiti) : 0;
+                (_brushMode == AnyRTCBoardBrushModelTransform || _brushMode == AnyRTCBoardBrushModelTransformSync) ? (_brushMode = AnyRTCBoardBrushModelGraffiti) : 0;
                 [_boardView setBrushModel:_brushMode];
             } else {
                 self.marginX.constant = self.menuStackView.frame.size.width;
-                [_boardView setBrushModel:AnyRTCBoardBrushModelTransform];
+                self.isTeacher ? ([_boardView setBrushModel:AnyRTCBoardBrushModelTransformSync]) : ([_boardView setBrushModel:AnyRTCBoardBrushModelTransform]);
                 _bottomView.hidden = YES;
             }
             
@@ -259,53 +260,6 @@
         _stackView.distribution = UIStackViewDistributionEqualSpacing;
     }
     return _stackView;
-}
-
-//随机字符串
-- (NSString*)randomString:(int)len {
-    char* charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    char* temp = malloc(len + 1);
-    for (int i = 0; i < len; i++) {
-        int randomPoz = (int) floor(arc4random() % strlen(charSet));
-        temp[i] = charSet[randomPoz];
-    }
-    temp[len] = '\0';
-    NSMutableString* randomString = [[NSMutableString alloc] initWithUTF8String:temp];
-    free(temp);
-    return randomString;
-}
-
-//错误信息
-- (NSString *)getErrorCode:(AnyRTCBoardCode)code{
-    switch (code) {
-        case AnyRTCBoardCodeParameterError:
-            return @"初始化错误";
-            
-        case AnyRTCBoardCodeNoNet:
-            return @"网络已断开，请检查网络";
-            
-        case AnyRTCBoardCodeUserIdIsNull:
-            return @"用户ID为空";
-            
-        case AnyRTCBoardCodeSessionPastDue:
-            return @"session过期";
-            
-        case AnyRTCBoardCodeDeveloperInfoError:
-            return @"开发者信息错误";
-            
-        case AnyRTCBoardCodeDeveloperArrearage:
-            return @"欠费";
-            
-        case AnyRTCBoardCodeDeveloperNotOpen:
-            return @"用户未开通该功能";
-            
-        case AnyRTCBoardCodeDatabaseError:
-            return @"数据库异常";
-            
-        default:
-            break;
-    }
-    return nil;
 }
 
 @end

@@ -19,6 +19,8 @@
 		6341A66E215F5AD1000E4CA0 /* AnyRTCBoardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6341A66D215F5AD1000E4CA0 /* AnyRTCBoardTests.m */; };
 		6341A679215F5AD1000E4CA0 /* AnyRTCBoardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6341A678215F5AD1000E4CA0 /* AnyRTCBoardUITests.m */; };
 		6347BE09216DA46B0064CCC0 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 6347BE08216DA46B0064CCC0 /* UIAlertController+Blocks.m */; };
+		63816CC9216F3E48000333EE /* AnyRTCCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 63816CC8216F3E48000333EE /* AnyRTCCommon.m */; };
+		63816CCD216F4099000333EE /* SSKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 63816CCC216F4099000333EE /* SSKeychain.m */; };
 		CAA8F912C9F471E1A5F84396 /* Pods_AnyRTCBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89649E952D33074AD0F8DD46 /* Pods_AnyRTCBoard.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,10 @@
 		6347BE06216C4E660064CCC0 /* AnyRTCBoard.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyRTCBoard.pch; sourceTree = "<group>"; };
 		6347BE07216DA46B0064CCC0 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
 		6347BE08216DA46B0064CCC0 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
+		63816CC7216F3E48000333EE /* AnyRTCCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AnyRTCCommon.h; sourceTree = "<group>"; };
+		63816CC8216F3E48000333EE /* AnyRTCCommon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnyRTCCommon.m; sourceTree = "<group>"; };
+		63816CCB216F4099000333EE /* SSKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSKeychain.h; sourceTree = "<group>"; };
+		63816CCC216F4099000333EE /* SSKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSKeychain.m; sourceTree = "<group>"; };
 		89649E952D33074AD0F8DD46 /* Pods_AnyRTCBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnyRTCBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F1B491C9AAA2FFA5DC40A0A /* Pods-AnyRTCBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRTCBoard.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnyRTCBoard/Pods-AnyRTCBoard.release.xcconfig"; sourceTree = "<group>"; };
 		D6C88F56054B1B669EB4CA51 /* Pods-AnyRTCBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnyRTCBoard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnyRTCBoard/Pods-AnyRTCBoard.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +138,7 @@
 				635E6756216DF80F0010AE3E /* Controller */,
 				635E6755216DF7E50010AE3E /* Base */,
 				635E6751216DADB20010AE3E /* Category */,
+				63816CCE216F416B000333EE /* Common */,
 				6341A65A215F5AD0000E4CA0 /* Main.storyboard */,
 				6341A65D215F5AD1000E4CA0 /* Assets.xcassets */,
 				6341A65F215F5AD1000E4CA0 /* LaunchScreen.storyboard */,
@@ -191,6 +198,25 @@
 				63123033216AFCF10068F5DF /* AnyRTCRoomController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		63816CCA216F4099000333EE /* SSKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				63816CCB216F4099000333EE /* SSKeychain.h */,
+				63816CCC216F4099000333EE /* SSKeychain.m */,
+			);
+			path = SSKeychain;
+			sourceTree = "<group>";
+		};
+		63816CCE216F416B000333EE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				63816CC7216F3E48000333EE /* AnyRTCCommon.h */,
+				63816CC8216F3E48000333EE /* AnyRTCCommon.m */,
+				63816CCA216F4099000333EE /* SSKeychain */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		B397F8D73F784DE67C4DBF61 /* Pods */ = {
@@ -384,7 +410,9 @@
 				6347BE09216DA46B0064CCC0 /* UIAlertController+Blocks.m in Sources */,
 				6341A664215F5AD1000E4CA0 /* main.m in Sources */,
 				6341A656215F5ACF000E4CA0 /* AppDelegate.m in Sources */,
+				63816CC9216F3E48000333EE /* AnyRTCCommon.m in Sources */,
 				6312303D216B353E0068F5DF /* UIButton+ImageTitleSpacing.m in Sources */,
+				63816CCD216F4099000333EE /* SSKeychain.m in Sources */,
 				63123037216AFE340068F5DF /* AnyRTCBaseController.m in Sources */,
 				63123031216AFCCB0068F5DF /* AnyRTCMainController.m in Sources */,
 				63123034216AFCF10068F5DF /* AnyRTCRoomController.m in Sources */,

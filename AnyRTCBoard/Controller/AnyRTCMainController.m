@@ -24,9 +24,10 @@
     [self.view addGestureRecognizer:tap];
 }
 
-- (IBAction)joinBoardRoom:(id)sender {
+- (IBAction)joinBoardRoom:(UIButton *)sender {
     /*
             roomId如果存在则加入画板，不存在则创建画板
+            根据自己业务逻辑去处理
         */
     if (self.roomIdTextField.text.length != 6) {
         [SVProgressHUD setMinimumDismissTimeInterval:1];
@@ -35,6 +36,7 @@
     } else {
         AnyRTCRoomController *roomVc = [[self storyboard] instantiateViewControllerWithIdentifier:@"AnyRTC_Room"];
         roomVc.roomId = self.roomIdTextField.text;
+        roomVc.isTeacher = (BOOL)sender.tag;
         [self.navigationController pushViewController:roomVc animated:YES];
     }
 }

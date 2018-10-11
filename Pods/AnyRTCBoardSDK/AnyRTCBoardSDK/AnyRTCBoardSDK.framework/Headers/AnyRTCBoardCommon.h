@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, AnyRTCBoardBrushModel) {
     AnyRTCBoardBrushModelLine,             //直线
     AnyRTCBoardBrushModelRect,             //矩形
     AnyRTCBoardBrushModelTransform,        //缩放(双指)/移动(单指)
+    AnyRTCBoardBrushModelTransformSync,    //缩放(双指)/移动(单指)-滑动同步
 };
 
 @protocol AnyRTCBoardViewDelegate <NSObject>

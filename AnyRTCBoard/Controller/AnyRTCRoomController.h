@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface AnyRTCRoomController : AnyRTCBaseController
 
 @property (copy, nonatomic) NSString *roomId;
+//1创建画板 0加入画板
+@property (assign ,nonatomic) BOOL isTeacher;
 
 @end
 

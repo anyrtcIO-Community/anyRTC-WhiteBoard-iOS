@@ -18,6 +18,7 @@
 #import "SVProgressHUD.h"
 #import "AppDelegate.h"
 #import "AnyRTCRoomController.h"
+#import "AnyRTCCommon.h"
 
 // MARK: - 宏
 
