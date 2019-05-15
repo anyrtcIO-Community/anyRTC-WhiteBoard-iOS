@@ -1,0 +1,6 @@
+framework module ARBoardEngine {
+  umbrella header "ARBoardEngine.h"
+
+  export *
+  module * { export * }
+}

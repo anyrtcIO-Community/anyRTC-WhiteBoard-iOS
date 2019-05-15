@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a1T-3s-g4P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a1T-3s-g4P">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,108 +19,17 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Qw9-uV-B9v" kind="relationship" relationship="rootViewController" id="4Na-nC-RKO"/>
+                        <segue destination="J3a-x7-px3" kind="relationship" relationship="rootViewController" id="cYt-0f-3cC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fDK-Us-3Fi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1521" y="23"/>
         </scene>
-        <!--AnyRTC Main Controller-->
-        <scene sceneID="REi-3d-Edi">
-            <objects>
-                <viewController id="Qw9-uV-B9v" customClass="AnyRTCMainController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kqh-DT-WmS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="anyRTCLOGO" translatesAutoresizingMaskIntoConstraints="NO" id="ENP-VB-ycQ">
-                                <rect key="frame" x="80" y="184" width="215" height="55"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入6位画板ID" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lt3-ZP-XbV">
-                                <rect key="frame" x="37.5" y="344" width="300" height="19"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
-                                <connections>
-                                    <outlet property="delegate" destination="Qw9-uV-B9v" id="jpm-xK-82A"/>
-                                </connections>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8Z-Kc-atS">
-                                <rect key="frame" x="37.5" y="373" width="300" height="1"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="pqd-SI-7j2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7IF-mx-Qoc">
-                                <rect key="frame" x="37.5" y="434" width="300" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LE7-KV-cD3"/>
-                                </constraints>
-                                <state key="normal" title="创建画板">
-                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="joinBoardRoom:" destination="Qw9-uV-B9v" eventType="touchUpInside" id="B7g-RH-GMG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hO7-dP-aLj">
-                                <rect key="frame" x="37.5" y="504" width="300" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="加入画板">
-                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="25"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="joinBoardRoom:" destination="Qw9-uV-B9v" eventType="touchUpInside" id="Oob-tF-mBi"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="lt3-ZP-XbV" firstAttribute="centerX" secondItem="Kqh-DT-WmS" secondAttribute="centerX" id="1ne-tJ-Pui"/>
-                            <constraint firstItem="ENP-VB-ycQ" firstAttribute="centerX" secondItem="Kqh-DT-WmS" secondAttribute="centerX" id="8Bm-r4-ajm"/>
-                            <constraint firstItem="hO7-dP-aLj" firstAttribute="height" secondItem="7IF-mx-Qoc" secondAttribute="height" id="Ehk-d3-LN7"/>
-                            <constraint firstItem="7IF-mx-Qoc" firstAttribute="centerX" secondItem="Kqh-DT-WmS" secondAttribute="centerX" id="Isg-aH-e4e"/>
-                            <constraint firstItem="7IF-mx-Qoc" firstAttribute="top" secondItem="G8Z-Kc-atS" secondAttribute="bottom" constant="60" id="K4d-Lt-jQb"/>
-                            <constraint firstItem="hO7-dP-aLj" firstAttribute="centerX" secondItem="7IF-mx-Qoc" secondAttribute="centerX" id="Mb5-a9-RI7"/>
-                            <constraint firstItem="7IF-mx-Qoc" firstAttribute="width" secondItem="lt3-ZP-XbV" secondAttribute="width" id="ThR-y8-7KT"/>
-                            <constraint firstItem="G8Z-Kc-atS" firstAttribute="width" secondItem="lt3-ZP-XbV" secondAttribute="width" id="ZYt-0v-DKZ"/>
-                            <constraint firstItem="lt3-ZP-XbV" firstAttribute="width" secondItem="Kqh-DT-WmS" secondAttribute="width" multiplier="0.8" id="b0V-eN-yWE"/>
-                            <constraint firstItem="lt3-ZP-XbV" firstAttribute="centerY" secondItem="Kqh-DT-WmS" secondAttribute="centerY" constant="20" id="eWg-NS-raQ"/>
-                            <constraint firstItem="hO7-dP-aLj" firstAttribute="top" secondItem="7IF-mx-Qoc" secondAttribute="bottom" constant="20" id="jZe-cE-pxn"/>
-                            <constraint firstItem="hO7-dP-aLj" firstAttribute="width" secondItem="7IF-mx-Qoc" secondAttribute="width" id="l1J-SP-mB4"/>
-                            <constraint firstItem="G8Z-Kc-atS" firstAttribute="centerX" secondItem="Kqh-DT-WmS" secondAttribute="centerX" id="ndD-km-hkF"/>
-                            <constraint firstItem="G8Z-Kc-atS" firstAttribute="top" secondItem="lt3-ZP-XbV" secondAttribute="bottom" constant="10" id="rei-tS-bxG"/>
-                            <constraint firstItem="ENP-VB-ycQ" firstAttribute="top" secondItem="zmy-80-wlt" secondAttribute="top" constant="120" id="vw5-L0-a00"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="zmy-80-wlt"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Uu9-cB-Zoj"/>
-                    <connections>
-                        <outlet property="roomIdTextField" destination="lt3-ZP-XbV" id="1HR-PF-MX1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Bd-4c-2C2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-831.20000000000005" y="22.938530734632685"/>
-        </scene>
-        <!--AnyRTC Room Controller-->
+        <!--Ar Room View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="AnyRTC_Room" id="BYZ-38-t0r" customClass="AnyRTCRoomController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AnyRTC_Room" id="BYZ-38-t0r" customClass="ArRoomViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -333,11 +242,112 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.800000000000001" y="15.742128935532236"/>
+            <point key="canvasLocation" x="695" y="23"/>
+        </scene>
+        <!--Ar Main View Controller-->
+        <scene sceneID="oYT-PV-Hwh">
+            <objects>
+                <viewController id="J3a-x7-px3" customClass="ArMainViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOK-uY-Dlh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_bg" translatesAutoresizingMaskIntoConstraints="NO" id="MSv-8y-2N7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="fhY-8H-WMK">
+                                <rect key="frame" x="145.5" y="125.5" width="84" height="93"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="6cx-9x-uQ9"/>
+                                    <constraint firstAttribute="height" constant="93" id="SpF-Kx-omv"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="15"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="anyRTC白板体验DEMO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3Y-Fj-8w0">
+                                <rect key="frame" x="98.5" y="243.5" width="178" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" red="0.66659259800000004" green="0.66670930390000005" blue="0.66658520700000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60T-UL-QHs">
+                                <rect key="frame" x="28" y="398.5" width="319" height="50"/>
+                                <color key="backgroundColor" red="0.19916644689999999" green="0.69555717709999998" blue="0.36316171289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="hP4-v4-8tP"/>
+                                </constraints>
+                                <state key="normal" title="创建画板">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinBoardRoom:" destination="J3a-x7-px3" eventType="touchUpInside" id="XRn-3D-gUn"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入6位画板ID" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Kaq-1n-3uC">
+                                <rect key="frame" x="28" y="328.5" width="319" height="50"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N5t-KB-0IR">
+                                <rect key="frame" x="124" y="623" width="127" height="29"/>
+                                <string key="text">V 3.0.0
+技术支持：hi@dync.cc</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.59993284940000002" green="0.60003870729999997" blue="0.59992617370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4g-Ng-Rqm">
+                                <rect key="frame" x="28" y="458.5" width="319" height="50"/>
+                                <color key="backgroundColor" red="0.19916644689999999" green="0.69555717709999998" blue="0.36316171289999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="加入画板">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="joinBoardRoom:" destination="J3a-x7-px3" eventType="touchUpInside" id="h8C-Ft-L8I"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MSv-8y-2N7" firstAttribute="leading" secondItem="Yxr-gf-Ajw" secondAttribute="leading" id="4ce-oD-wNJ"/>
+                            <constraint firstItem="Yxr-gf-Ajw" firstAttribute="bottom" secondItem="N5t-KB-0IR" secondAttribute="bottom" constant="15" id="AMe-8I-w9m"/>
+                            <constraint firstItem="60T-UL-QHs" firstAttribute="centerX" secondItem="BOK-uY-Dlh" secondAttribute="centerX" id="EDP-AB-Rjq"/>
+                            <constraint firstItem="Kaq-1n-3uC" firstAttribute="width" secondItem="60T-UL-QHs" secondAttribute="width" id="Ezl-xm-URx"/>
+                            <constraint firstItem="60T-UL-QHs" firstAttribute="top" secondItem="Kaq-1n-3uC" secondAttribute="bottom" constant="20" id="Hxm-E8-5ef"/>
+                            <constraint firstItem="c4g-Ng-Rqm" firstAttribute="top" secondItem="60T-UL-QHs" secondAttribute="bottom" constant="10" id="I6r-3f-WTF"/>
+                            <constraint firstItem="Kaq-1n-3uC" firstAttribute="centerY" secondItem="BOK-uY-Dlh" secondAttribute="centerY" constant="20" id="PAT-U2-VX2"/>
+                            <constraint firstItem="c4g-Ng-Rqm" firstAttribute="centerX" secondItem="60T-UL-QHs" secondAttribute="centerX" id="Qgq-gj-iFi"/>
+                            <constraint firstItem="c4g-Ng-Rqm" firstAttribute="width" secondItem="60T-UL-QHs" secondAttribute="width" id="RRw-6P-ibq"/>
+                            <constraint firstItem="u3Y-Fj-8w0" firstAttribute="centerX" secondItem="BOK-uY-Dlh" secondAttribute="centerX" id="RvW-AM-LpR"/>
+                            <constraint firstItem="u3Y-Fj-8w0" firstAttribute="centerY" secondItem="BOK-uY-Dlh" secondAttribute="centerY" constant="-80" id="T3a-aK-lyI"/>
+                            <constraint firstItem="MSv-8y-2N7" firstAttribute="top" secondItem="Yxr-gf-Ajw" secondAttribute="top" id="ZAO-Cj-0Vc"/>
+                            <constraint firstItem="Kaq-1n-3uC" firstAttribute="height" secondItem="60T-UL-QHs" secondAttribute="height" id="a7b-hQ-OUS"/>
+                            <constraint firstItem="Yxr-gf-Ajw" firstAttribute="trailing" secondItem="MSv-8y-2N7" secondAttribute="trailing" id="eeG-zS-jHo"/>
+                            <constraint firstItem="fhY-8H-WMK" firstAttribute="centerX" secondItem="BOK-uY-Dlh" secondAttribute="centerX" id="hJu-gt-T3L"/>
+                            <constraint firstItem="u3Y-Fj-8w0" firstAttribute="top" secondItem="fhY-8H-WMK" secondAttribute="bottom" constant="25" id="jb1-0X-vcM"/>
+                            <constraint firstItem="c4g-Ng-Rqm" firstAttribute="height" secondItem="60T-UL-QHs" secondAttribute="height" id="jcq-zY-Rmv"/>
+                            <constraint firstItem="Yxr-gf-Ajw" firstAttribute="bottom" secondItem="MSv-8y-2N7" secondAttribute="bottom" id="srf-BI-LSY"/>
+                            <constraint firstItem="Kaq-1n-3uC" firstAttribute="centerX" secondItem="BOK-uY-Dlh" secondAttribute="centerX" id="ySm-LQ-sM1"/>
+                            <constraint firstItem="60T-UL-QHs" firstAttribute="width" secondItem="BOK-uY-Dlh" secondAttribute="width" multiplier="0.85" id="ya6-ZG-onm"/>
+                            <constraint firstItem="N5t-KB-0IR" firstAttribute="centerX" secondItem="BOK-uY-Dlh" secondAttribute="centerX" id="ycf-4w-54c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yxr-gf-Ajw"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vbd-7z-RNn"/>
+                    <connections>
+                        <outlet property="roomIdTextField" destination="Kaq-1n-3uC" id="Sae-5X-iJm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Po-e2-cKC" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-818" y="23"/>
         </scene>
     </scenes>
     <resources>
-        <image name="anyRTCLOGO" width="215" height="55"/>
         <image name="board_exit" width="33" height="33"/>
         <image name="board_open" width="33" height="33"/>
         <image name="board_unOpen" width="33" height="33"/>
@@ -345,6 +355,8 @@
         <image name="brush_thickness0" width="22" height="22"/>
         <image name="brush_unSelected" width="22" height="22"/>
         <image name="clear" width="22" height="22"/>
+        <image name="img_bg" width="375" height="667"/>
+        <image name="img_logo" width="84" height="93.5"/>
         <image name="left_slide" width="33" height="33"/>
         <image name="left_unslider" width="33" height="33"/>
         <image name="repeal" width="22" height="22"/>

@@ -8,20 +8,13 @@
 
 #import "AppDelegate.h"
 
-#warning 请前往 https://www.anyrtc.io ，免费试用
-static NSString *developerID = @"XXX";
-static NSString *token = @"XXX";
-static NSString *key = @"XXX";
-static NSString *appID = @"XXX";
-
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     //AnyRTCBoard SDK 初始化
-    [AnyRTCBoardEngine initEngineWithAnyRTCInfo:developerID andAppId:appID andKey:key andToke:token];
-    
+    [ARBoardConfig initEngine:appID token:token];
     return YES;
 }
 
