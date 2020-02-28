@@ -25,7 +25,7 @@ pod 'ARBoardEngine', '~> 3.0.3'
 创建应用，在管理中心获取开发者ID，AppID，AppKey，AppToken，替换AppDelegate.h中的相关信息
 
 ### 资源中心
-[更多详细方法使用，请查看API文档](https://www.anyrtc.io/resoure)
+[更多详细方法使用，请查看API文档](https://docs.anyrtc.io/v1/whiteboard/)
 
 ## 项目展示
 ![board](/image/board.mov)
