@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,7 @@
 /* Begin PBXFileReference section */
 		6312303B216B353E0068F5DF /* UIButton+ImageTitleSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ImageTitleSpacing.m"; sourceTree = "<group>"; };
 		6312303C216B353E0068F5DF /* UIButton+ImageTitleSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ImageTitleSpacing.h"; sourceTree = "<group>"; };
-		6341A651215F5ACF000E4CA0 /* AnyRTCBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnyRTCBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6341A651215F5ACF000E4CA0 /* 互动白板.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "互动白板.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6341A654215F5ACF000E4CA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6341A655215F5ACF000E4CA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6341A65B215F5AD0000E4CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 		6341A652215F5ACF000E4CA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6341A651215F5ACF000E4CA0 /* AnyRTCBoard.app */,
+				6341A651215F5ACF000E4CA0 /* 互动白板.app */,
 				6341A669215F5AD1000E4CA0 /* AnyRTCBoardTests.xctest */,
 				6341A674215F5AD1000E4CA0 /* AnyRTCBoardUITests.xctest */,
 			);
@@ -258,7 +258,7 @@
 			);
 			name = AnyRTCBoard;
 			productName = AnyRTCBoard;
-			productReference = 6341A651215F5ACF000E4CA0 /* AnyRTCBoard.app */;
+			productReference = 6341A651215F5ACF000E4CA0 /* 互动白板.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6341A668215F5AD1000E4CA0 /* AnyRTCBoardTests */ = {
@@ -303,7 +303,7 @@
 		6341A649215F5ACF000E4CA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = anyRTC;
 				TargetAttributes = {
 					6341A650215F5ACF000E4CA0 = {
@@ -389,21 +389,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AnyRTCBoard/Pods-AnyRTCBoard-frameworks.sh",
-				"${PODS_ROOT}/ARBoardEngine/ARBoardEngine/ARBoardEngine.framework",
-				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
-				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnyRTCBoard/Pods-AnyRTCBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARBoardEngine.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AnyRTCBoard/Pods-AnyRTCBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -588,10 +579,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D6C88F56054B1B669EB4CA51 /* Pods-AnyRTCBoard.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnyRTCBoard",
@@ -603,8 +596,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.AnyRTCBoard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "互动白板";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -614,10 +608,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8F1B491C9AAA2FFA5DC40A0A /* Pods-AnyRTCBoard.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5543CP4MRT;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AnyRTCBoard",
@@ -629,8 +625,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 3.0.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.AnyRTCBoard;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "互动白板";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};

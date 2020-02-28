@@ -13,7 +13,7 @@ Xcode 8以上</br>
 
 ### Cocoapods导入
 ```
-pod 'ARBoardEngine', '~> 3.0.1'
+pod 'ARBoardEngine', '~> 3.0.3'
 ```
 
 ## 如何使用？
@@ -48,6 +48,20 @@ pod 'ARBoardEngine', '~> 3.0.1'
 
 ## Web白板
 [anyRTC-WhiteBoard-Web](https://github.com/anyRTC/anyRTC-WhiteBoard-Web)
+
+## 更新日志
+
+* 2020年02月27日：</br>
+
+修复Bug，SDK优化 </br>
+
+* 2019年05月15日：</br>
+
+SDK版本升级3.0，API接口变更</br>
+
+* 2017年09月30日：</br>
+
+SDK版本升级2.0，梳理、完善SDK
 
 ## 技术支持
 * anyRTC官方网址：https://www.anyrtc.io </br>

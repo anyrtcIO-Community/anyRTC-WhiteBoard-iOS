@@ -62,8 +62,8 @@
 
 - (void)initializeBoard{
     NSMutableArray *imageArr = [NSMutableArray arrayWithCapacity:27];
-    for (NSInteger i = 1; i <= 27; i++) {
-        [imageArr addObject:[NSString stringWithFormat:@"http://oss.teameeting.cn/docs/140248771/20180929173501062526/document_20180929173501536430_%ld.jpg",(long)i]];
+    for (NSInteger i = 1; i <= 15; i++) {
+        [imageArr addObject:[NSString stringWithFormat:@"http://oss.teameeting.cn/docs/140248771/20200224145240087767/document_20200224145239862898_%ld.jpg",(long)i]];
     }
     
     //初始化画板
@@ -114,13 +114,7 @@
 
 - (void)onBoardDestory {
     //销毁画板
-    if (!self.isTeacher) {
-        [self exitBoardRoom];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [SVProgressHUD setMinimumDismissTimeInterval:1];
-            [SVProgressHUD showInfoWithStatus:@"课堂已结束"];
-        });
-    }
+    [self exitBoardRoom];
 }
 
 // MARK: - Event

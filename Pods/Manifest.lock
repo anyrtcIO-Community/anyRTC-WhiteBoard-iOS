@@ -1,17 +1,17 @@
 PODS:
-  - ARBoardEngine (3.0.1):
+  - ARBoardEngine (3.0.3):
     - SDWebImage (~> 5.0.0)
     - Socket.IO-Client-Swift (~> 14.0.0)
-  - SDWebImage (5.0.2):
-    - SDWebImage/Core (= 5.0.2)
-  - SDWebImage/Core (5.0.2)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - Socket.IO-Client-Swift (14.0.0):
     - Starscream (~> 3.0.6)
   - Starscream (3.0.6)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - ARBoardEngine (~> 3.0.1)
+  - ARBoardEngine (~> 3.0.3)
   - SVProgressHUD
 
 SPEC REPOS:
@@ -23,12 +23,12 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
-  ARBoardEngine: c34a85f091361d8701acdbfe5a00b0cbf1b7bca8
-  SDWebImage: 6764b5fa0f73c203728052955dbefa2bf1f33282
+  ARBoardEngine: 4b89bb0ba324a76fe1e3b7e43326794bf3711a3a
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 8170c078b5e6c3f3555c86dc6f67f3ea97cb44fc
+PODFILE CHECKSUM: ba3aa4e4d96c96f66719a19f421924c095252ee1
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.7.1

@@ -21,6 +21,14 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)initEngine:(NSString*)appId token:(NSString*)token;
 
 /**
+ 配置私有云
+
+ @param address 私有云地址
+ @param port 私有云端口
+ */
++ (void)configServerForPriCloud:(NSString *)address port:(int)port;
+
+/**
  开启/关闭控制台打印（默认打印）
  
  @param isEnable YES:打印；NO:不打印
