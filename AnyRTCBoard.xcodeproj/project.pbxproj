@@ -596,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.3;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.AnyRTCBoard;
 				PRODUCT_NAME = "互动白板";
 				PROVISIONING_PROFILE_SPECIFIER = dync_dis;
@@ -625,7 +625,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.3;
+				MARKETING_VERSION = 3.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dync.AnyRTCBoard;
 				PRODUCT_NAME = "互动白板";
 				PROVISIONING_PROFILE_SPECIFIER = dync_dis;
