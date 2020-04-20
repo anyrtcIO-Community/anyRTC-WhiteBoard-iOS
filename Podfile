@@ -4,6 +4,7 @@ target ‘AnyRTCBoard’ do
 
 pod 'SVProgressHUD'
 pod 'ARBoardEngine', '~> 3.0.3'
+pod 'Bugly'
 
 use_frameworks!
 

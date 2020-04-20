@@ -26,6 +26,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
+## Bugly
+
+Copyright (C) 2017 Tencent Bugly, Inc. All rights reserved.
+
+
 ## SDWebImage
 
 Copyright (c) 2009-2018 Olivier Poitrey rs@dailymotion.com

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Bugly/Bugly.h>
 
 @implementation AppDelegate
 
@@ -15,6 +16,7 @@
     // Override point for customization after application launch.
     //AnyRTCBoard SDK 初始化
     [ARBoardConfig initEngine:appID token:token];
+    [Bugly startWithAppId:@"81c56dfe77"];
     return YES;
 }
 

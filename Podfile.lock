@@ -2,6 +2,7 @@ PODS:
   - ARBoardEngine (3.0.3):
     - SDWebImage (~> 5.0.0)
     - Socket.IO-Client-Swift (~> 14.0.0)
+  - Bugly (2.5.2)
   - SDWebImage (5.0.6):
     - SDWebImage/Core (= 5.0.6)
   - SDWebImage/Core (5.0.6)
@@ -12,11 +13,13 @@ PODS:
 
 DEPENDENCIES:
   - ARBoardEngine (~> 3.0.3)
+  - Bugly
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - ARBoardEngine
+    - Bugly
     - SDWebImage
     - Socket.IO-Client-Swift
     - Starscream
@@ -24,11 +27,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   ARBoardEngine: 4b89bb0ba324a76fe1e3b7e43326794bf3711a3a
+  Bugly: dbac48b55ad469a97cc4321045cd50df8f63d44f
   SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   Socket.IO-Client-Swift: 21e6a8a23a7d367d5ddfab6cbbd3c679cf3c25d6
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: ba3aa4e4d96c96f66719a19f421924c095252ee1
+PODFILE CHECKSUM: d1e5f30a248dcfe90f183b0d1f3cdb060cbfca97
 
 COCOAPODS: 1.7.1
